@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Currículo</title>
+    <link rel="stylesheet" href="styles/cadastroCurriculo.css">
+</head>
+<body>
+
+    <!-- Seção de Cadastro -->
+    <section class="form-container">
+        <div class="form-wrapper">
+            <h1 class="form-title">Cadastro de Currículo</h1>
+            <p class="form-description">Preencha as informações abaixo para cadastrar seu currículo e se candidatar a vagas.</p>
+
+            <form id="formCadastro" action="#" method="POST" enctype="multipart/form-data">
+                
+                <!-- Dados Pessoais -->
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="input-group">
+                    <label for="foto">Foto de Perfil</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" required min="18" placeholder="Digite sua idade">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+                </div>
+
+                <div class="input-group">
+                    <label for="endereco">Endereço</label>
+                    <textarea id="endereco" name="endereco" required placeholder="Digite seu endereço"></textarea>
+                </div>
+
+                <!-- Primeiro Emprego -->
+                <div class="input-group">
+                    <label>
+                        <input type="checkbox" id="primeiroEmprego" name="primeiroEmprego"> 
+                        Sim, é meu primeiro emprego
+                    </label>
+                </div>
+
+                <!-- Experiência Profissional -->
+                <div class="experiencia-section">
+                    <h2>Experiência Profissional</h2>
+                    <div class="input-group experiencia">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+                    </div>
+
+                    <div class="input-group experiencia">
+                        <label for="funcao">Função</label>
+                        <input type="text" id="funcao" name="funcao" placeholder="Sua função na empresa">
+                    </div>
+
+                    <div class="input-group experiencia">
+                        <label for="tempo">Tempo de Experiência</label>
+                        <input type="text" id="tempo" name="tempo" placeholder="Exemplo: 2 anos">
+                    </div>
+
+                    <button type="button" id="adicionarExperiencia" class="btn-primary">Adicionar Experiência</button>
+
+                    <ul id="listaExperiencias"></ul>
+                </div>
+
+                <!-- Cursos -->
+                <div class="cursos-section">
+                    <h2>Cursos e Capacitações</h2>
+                    <div class="input-group">
+                        <label for="cursoNome">Nome do Curso</label>
+                        <input type="text" id="cursoNome" name="cursoNome" placeholder="Nome do curso">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="instituicao">Instituição</label>
+                        <input type="text" id="instituicao" name="instituicao" placeholder="Instituição onde fez o curso">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="duracao">Duração</label>
+                        <input type="text" id="duracao" name="duracao" placeholder="Duração do curso">
+                    </div>
+
+                    <button type="button" id="adicionarCurso" class="btn-primary">Adicionar Curso</button>
+
+                    <ul id="listaCursos"></ul>
+                </div>
+
+                <button type="submit" class="btn-submit">Cadastrar Currículo</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

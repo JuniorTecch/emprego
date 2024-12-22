@@ -1,0 +1,119 @@
+/* Resetando margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #990000; /* Alterado para vermelho #990000 */
+}
+
+/* Cards de Conteúdo */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo de cada Card */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ícones dos Cards */
+.card .icon {
+    font-size: 3rem;
+    color: #990000; /* Alterado para vermelho #990000 */
+    margin-bottom: 15px;
+}
+
+/* Títulos dos Cards */
+.card h2 {
+    font-size: 1.2rem;
+    color: #990000; /* Alterado para vermelho #990000 */
+    margin-bottom: 10px;
+}
+
+/* Descrição nos Cards */
+.card p {
+    color: #777;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #990000; /* Mudando a cor para #990000 */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100%; /* Faz o botão ocupar toda a largura do card */
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #cc0000;
+}
+
+/* Botão de Sair */
+.exit-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.exit-btn .btn {
+    background-color: #990000; /* Mudando a cor para #990000 */
+}
+
+.exit-btn .btn:hover {
+    background-color: #cc0000;
+}
